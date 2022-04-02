@@ -3,7 +3,10 @@ import "./style.css";
 import Button from "./Button";
 
 class App extends React.Component {
-  state = { capacity: 0, message: "" };
+  constructor() {
+    super();
+    this.state = { capacity: 0, message: "" };
+  }
 
   display = (updatedCapacity) => {
     this.setState({ capacity: updatedCapacity });
