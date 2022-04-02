@@ -13,18 +13,15 @@ class Button extends React.Component {
     }
   };
 
+  handleClick =
+    this.props.label === "+" ? this.increBtnClicked : this.decreBtnClicked;
+
   render() {
     return (
       <div>
-        {this.props.label === "increment" ? (
-          <button className="counterBtn" onClick={this.increBtnClicked}>
-            +
-          </button>
-        ) : (
-          <button className="counterBtn" onClick={this.decreBtnClicked}>
-            -
-          </button>
-        )}
+        <button className="counterBtn" onClick={this.handleClick}>
+          {this.props.label}
+        </button>
       </div>
     );
   }

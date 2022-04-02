@@ -4,19 +4,6 @@ import Button from "./Button";
 
 class App extends React.Component {
   state = { capacity: 0, message: "" };
-  // capacityDecrement = () => {
-  //   if (this.state.capacity > 0) {
-  //     this.setState({ capacity: this.state.capacity - 1 });
-  //   }
-  // };
-
-  // capacityIncrement = () => {
-  //   if (this.state.capacity < 100) {
-  //     this.setState({ capacity: this.state.capacity + 1 });
-  //   } else {
-  //     this.setState({ message: "Max capacity is reached!" });
-  //   }
-  // };
 
   display = (updatedCapacity) => {
     this.setState({ capacity: updatedCapacity });
@@ -30,6 +17,7 @@ class App extends React.Component {
   reset = () => {
     this.setState({ capacity: 0, message: "" });
   };
+
   render() {
     return (
       <div className="container">
@@ -47,19 +35,17 @@ class App extends React.Component {
           <Button
             clicked={this.display}
             capacity={this.state.capacity}
-            label={"decrement"}
+            label={"-"}
           />
         </div>
         <div className="item div3">
           <Button
             clicked={this.display}
             capacity={this.state.capacity}
-            label={"increment"}
+            label={"+"}
           />
         </div>
-        <div className="div4">
-          {/* <Button clicked={this.display} capacity={this.state.capacity} /> */}
-        </div>
+        <div className="div4"></div>
       </div>
     );
   }
