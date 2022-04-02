@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 20%;
+  border: 1px solid black;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 3;
+  border-bottom: 1px solid black;
+}
+.div2 {
+  grid-area: 4 / 1 / 5 / 2;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.div3 {
+  grid-area: 4 / 2 / 5 / 3;
+  border-bottom: 1px solid black;
+}
+.div4 {
+  grid-area: 5 / 1 / 6 / 3;
+}
+.item {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.capacity-label {
+  padding: 50px;
+}
+
+.display {
+  font-size: 50px;
+  padding: 60px;
+}
+
+.counterBtn {
+  border: none;
+  background: none;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.reset {
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+}
